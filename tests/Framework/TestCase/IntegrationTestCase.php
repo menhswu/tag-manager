@@ -14,13 +14,13 @@ use Piwik\Translate;
  */
 class IntegrationTestCase extends \Piwik\Tests\Framework\TestCase\IntegrationTestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         Translate::loadEnglishTranslation();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         Translate::unloadEnglishTranslation();
         parent::tearDown();
